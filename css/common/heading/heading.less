@@ -1,9 +1,24 @@
 .heading {
     font-size: 26px;
     font-family: @font-family-heading;
-    margin: 0 0 20px;
+    margin: 0 0 10px;
+
+    @media @screen-gt-s {
+        margin: 0 0 20px;
+        font-size: 36px;
+        line-height: 44px;
+    }
+    
+    &_level-1 {
+        text-align: center;
+        font-weight: 400;
+        @media @screen-gt-s {
+            text-align: unset;
+        }
+    }
 
     &_level-2 {
+        margin: 0 0 20px;
         font-size: 20px;
 
         @media @screen-gt-s {

@@ -1,0 +1,23 @@
+.store {
+    display: flex;
+    margin: 0 -4px;
+
+    @media @screen-gt-s {
+        justify-content: flex-end;
+    }
+}
+
+.store-icon {
+    height: 40px;
+    width: 140px;
+    text-indent: -9999px;
+    margin: 0 4px;
+}
+
+@store-icons: app-store, google-play;
+
+each(@store-icons, {
+    .store-icon_@{value} {
+        background-image: url('blocks/store/@{value}.svg');
+    }
+})
