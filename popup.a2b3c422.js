@@ -117,14 +117,15 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"js/grid.js":[function(require,module,exports) {
-var grid = document.createElement('div');
-grid.className = 'grid';
-document.body.appendChild(grid);
-document.addEventListener('keydown', function (event) {
-  if (event.ctrlKey && event.code === 'KeyG') {
-    grid.classList.toggle('grid_visible');
-  }
+})({"js/popup.js":[function(require,module,exports) {
+var popup = document.querySelector('.popup');
+document.querySelectorAll('.section-content .product-card').forEach(function (node) {
+  node.addEventListener('click', function () {
+    return popup.style.display = 'block';
+  });
+});
+document.querySelector('.popup__close').addEventListener('click', function () {
+  return popup.style.display = 'none';
 });
 },{}],"../../../Users/yury/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -330,5 +331,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../../Users/yury/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/grid.js"], null)
-//# sourceMappingURL=/grid.b183775e.js.map
+},{}]},{},["../../../Users/yury/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/popup.js"], null)
+//# sourceMappingURL=/popup.a2b3c422.js.map
