@@ -1,16 +1,64 @@
 .button {
-    color: #fff;
-    background: #0f8fee;
     border-radius: 1px;
     text-decoration: none;
     padding: 9px 15px;
     line-height: 1.45em;
     display: inline-block;
+    border: 0;
+    text-align: center;
 
-    &:hover {
-        background: #3781d0;
-    }
     &:active {
         box-shadow: inset 0px 2px 4px 0px rgba(0, 0, 0, 0.2);
+    }
+
+    &_default {
+        padding: 8px 15px;
+        border: solid 1px @color-lighter;
+        color: #666;
+
+        &:active {
+            background: @color-light;
+        }
+    }
+
+    &_default-active {
+        background: @color-light;
+    }
+
+    &_growed {
+        box-sizing: border-box;
+        flex-grow: 1;
+    }
+
+    &_mw {
+        min-width: 123px;
+    }
+
+    &_primary {
+        color: #fff;
+        background: #0f8fee;
+
+        &:hover {
+            background: #3781d0;
+        }
+    }
+
+    &_grouped {
+        margin-left: -1px;
+    }
+}
+
+.button-group {
+    padding: 5px 0;
+    display: flex;
+    box-sizing: border-box;
+    width: 100%;
+
+    @media @screen-gt-s {
+        width: auto;
+    }
+
+    &__checkbox {
+        display: none;
     }
 }

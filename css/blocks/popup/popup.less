@@ -1,0 +1,37 @@
+.popup {
+    display: none;
+    background: #fff;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    
+    box-sizing: border-box;
+    min-width: 320px;
+    padding: 20px 15px;
+
+    @media @screen-gt-s {
+        top: 24px;
+        width: @column-width-m * 6 + 40;
+        margin: 0 auto;
+        padding: 30px 35px;
+    }
+
+    @media @screen-gt-m {
+        width: @column-width-l * 12 + 50;
+        padding: 40px 40px;
+    }
+}
+
+.popup__header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.popup__close {
+    background: url('blocks/popup/close.svg');
+    width: 30px;
+    height: 30px;
+    border: 0px;
+}
