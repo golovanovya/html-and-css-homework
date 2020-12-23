@@ -18,6 +18,10 @@
     flex-wrap: wrap;
     margin: 0 -@column-padding-s;
 
+    &_sb {
+        justify-content: space-between;
+    }
+
     @media @screen-gt-s {
         margin: 0 -@column-padding-m;
     }
@@ -28,8 +32,22 @@
     width: @column-width-s;
     padding: 0 @column-padding-s;
 
+    &_order-1 {
+        order: 1;
+    }
+
     @media @screen-gt-s {
         padding: 0 @column-padding-m;
+
+        &_order-m-1 {
+            order: 1;
+        }
+    }
+
+    @media @screen-gt-m {
+        &_order-l-1 {
+            order: 1;
+        }
     }
 }
 

@@ -1,0 +1,19 @@
+.social {
+    display: flex;
+    margin-left: -15px;
+}
+
+.social-icon {
+    height: 36px;
+    width: 36px;
+    text-indent: -9999px;
+    margin-left: 15px;
+}
+
+@social-icons: facebook, twitter, vk, instagram;
+
+each(@social-icons, {
+    .social-icon_@{value} {
+        background-image: url('blocks/social/@{value}.svg');
+    }
+})

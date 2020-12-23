@@ -7,6 +7,35 @@
         <link rel="stylesheet" href="css/styles.less"/>
     </head>
     <body>
+        <section class="top-bar">
+            <div class="column-wrapper">
+                <div class="top-bar__content">
+                    <div class="location">
+                        Москва
+                    </div>
+                    <div class="top-bar__fill"></div>
+                    <nav class="top-bar__menu">
+                        <ul class="menu menu_light">
+                            <li class="menu__item">
+                                <a class="menu__link menu__link_light" href="#">Шоурум</a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link menu__link_light" href="#">Оплата</a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link menu__link_light" href="#">Доставка</a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link menu__link_light" href="#">Самовывоз</a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link menu__link_light" href="#">Контактная информация</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </section>
         <header class="header">
             <div class="column-wrapper">
                 <div class="header__content">
@@ -51,7 +80,35 @@
                 </div>
             </div>
         </header>
-
+        <section class="slider">
+            <div class="column-wrapper">
+                <div class="column-row">
+                    <div class="column column_s-2 column_m-3 column_l-6 column_order-m-1">
+                        <div class="slider__container">
+                            <div class="slider__item">
+                                <img class="slider__image" src="images/slider.png" alt="slide1" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column column_s-2 column_m-6 column_l-12 column_order-m-1">
+                        <ul class="slider__navigation">
+                            <li class="slider__dot slider__dot_active">1</li>
+                            <li class="slider__dot">2</li>
+                            <li class="slider__dot">3</li>
+                            <li class="slider__dot">4</li>
+                        </ul>
+                    </div>
+                    <div class="column column_s-2 column_m-3 column_l-6">
+                        <div class="header-title">
+                            <h1 class="heading heading_level-1">
+                                Мужская и женская одежда с символикой HeadHunter
+                            </h1>
+                            <a href="#" class="button button_primary">Перейти в каталог</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
         <section class="section-content">
             <div class="column-wrapper">
                 <h2 class="heading heading_level-2">Популярные товары</h2>
@@ -117,7 +174,162 @@
                 </div>
             </div>
         </section>
-
+        <section class="service">
+            <div class="column-wrapper">
+                <div class="column-row">
+                    <div class="column column_l-4 column_m-2 column_s-2">
+                        <div class="service__item">
+                            <img src="css/blocks/service/delivery.svg" class="service-icon" alt="Delivery" />
+                            <div class="service__text">
+                                Быстрая доставка по всей России
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column column_l-4 column_m-2 column_s-2">
+                        <div class="service__item">
+                            <img src="css/blocks/service/return.svg" class="service-icon" alt="Return" />
+                            <span class="service__text">
+                                100% гарантия возврата и подлинность товара
+                            </span>
+                        </div>
+                    </div>
+                    <div class="column column_l-4 column_m-2 column_s-2">
+                        <div class="service__item">
+                            <img src="css/blocks/service/support.svg" class="service-icon" alt="Support" />
+                            <div class="service__text">
+                                Круглосуточная служба поддержки
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="popup">
+            <div class="order">
+                <div class="column-row column-row_sb">
+                    <div class="column column_s-2">
+                        <div class="popup__header">
+                            <h2 class="heading heading_level-1">Оформление заказа</h2>
+                            <button class="popup__close"></button>
+                        </div>
+                    </div>
+                    <div class="column column_s-2 column_m-3 column_l-7">
+                        <div class="form">
+                            <h4 class="heading heading_level-4">Контактное лицо</h4>
+                            <input class="form__input" id="name" name="name" type="text" value="" placeholder="ФИО">
+                            <input class="form__input" type="email" name="email" value="" placeholder="Электронная почта">
+                            <div class="form__group">
+                                <span class="form__input">+7</span>
+                                <input class="form__input form__input_phone-code" type="number" name="phone-code" value="" placeholder="Код">
+                                <input class="form__input form__input_phone" type="number" name="phone" value="" placeholder="Номер">
+                            </div>
+                            <h4 class="heading heading_level-4">Способ получения товара</h4>
+                            <div class="form__group">
+                                <div class="button-group">
+                                    <input class="button-group__checkbox" type="radio" id="pickup" name="delivery-method" value="pickup" checked>
+                                    <label class="button button_grouped button_default button_mw button_growed" for="pickup">Самовывоз</label>
+                                    <input class="button-group__checkbox" type="radio" id="delivery" name="delivery-method" value="delivery">
+                                    <label class="button button_grouped button_default button_mw button_growed button_default-active" for="delivery">Доставка</label>
+                                </div>
+                            </div>
+                            <h4 class="heading heading_level-4">Адрес</h4>
+                            <select name="city" class="form__input">
+                                <option selected>Город</option>
+                                <option value="Moscow">Москва</option>
+                                <option value="S.-Petersburg">Санкт-Петербург</option>
+                            </select>
+                            <textarea id="address" class="form__input form__input_textarea"></textarea>
+                            <h4 class="heading heading_level-4">Оплата</h4>
+                            <div class="form__group">
+                                <input class="form__radio" type="radio" name="payment-type" value="online-payment" id="online-payment" checked>
+                                <label class="form__label form__label_radio" for="online-payment">Online-оплата</label>
+                            </div>
+                            <div class="form__group">
+                                <input class="form__radio" type="radio" name="payment-type" value="cash" id="cash">
+                                <label class="form__label form__label_radio" for="cash">Наличные</label>
+                            </div>
+                            <div class="form__group">
+                                <input class="form__radio" type="radio" name="payment-type" value="card" id="card">
+                                <label class="form__label form__label_radio" for="card">Картой при получении</label>
+                            </div>
+                            <h4 class="heading heading_level-4">Уведомления</h4>
+                            <div class="form__group">
+                                <input class="form__checkbox" type="checkbox" value="1" name="notifications" id="notifications">
+                                <label class="form__label" for="notifications">Хочу получать SMS уведомления</label>
+                            </div>
+                            <input class="button button_primary" type="submit" value="Оформить заказ">
+                        </div>
+                    </div>
+                    <div class="column column_s-2 column_m-3 column_l-4">
+                        <div class="product-card product-card_checkout">
+                            <div class="product-card__image-container">
+                                <img class="product-card__image" src="images/product-4.jpg" alt="Футболка" />
+                                <div class="product-card__sale">sale</div>
+                            </div>
+                            <div class="product-card__name">Футболка</div>
+                            <div class="product-card__price">
+                                <span class="product-card__old-price">690</span>
+                                390 ₽
+                            </div>
+                            <div class="product-card__description">
+                                Красная хлопоковая футболка с коротким руковом
+                            </div>
+                            <div class="button-group">
+                                <input class="button-group__checkbox" type="radio" id="XS" name="size" value="XS" checked>
+                                <label class="button button_grouped button_default button_growed" for="XS">XS</label>
+                                <input class="button-group__checkbox" type="radio" id="S" name="size" value="S" checked>
+                                <label class="button button_grouped button_default button_growed" for="S">S</label>
+                                <input class="button-group__checkbox" type="radio" id="M" name="size" value="M" checked>
+                                <label class="button button_grouped button_default button_growed button_default-active" for="M">M</label>
+                                <input class="button-group__checkbox" type="radio" id="L" name="size" value="L" checked>
+                                <label class="button button_grouped button_default button_growed" for="L">L</label>
+                                <input class="button-group__checkbox" type="radio" id="XL" name="size" value="XL" checked>
+                                <label class="button button_grouped button_default button_growed" for="XL">XL</label>
+                                <input class="button-group__checkbox" type="radio" id="XXL" name="size" value="XL" checked>
+                                <label class="button button_grouped button_default button_growed" for="XXL">XXL</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+        <footer class="footer">
+            <div class="column-wrapper">
+                <div class="footer-container">
+                    <div class="column-row">
+                        <div class="column column_l-4 column_m-3 column_s-2">
+                            <div class="footer-item">
+                                <div class="social">
+                                    <a href="#" class="social-icon social-icon_facebook">Facebook</a>
+                                    <a href="#" class="social-icon social-icon_twitter">Twitter</a>
+                                    <a href="#" class="social-icon social-icon_vk">VK</a>
+                                    <a href="#" class="social-icon social-icon_instagram">Instagram</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column column_l-4 column_m-3 column_s-2">
+                            <div class="footer-item">
+                                <div class="store">
+                                    <a href="#" class="store-icon store-icon_app-store">App Store</a>
+                                    <a href="#" class="store-icon store-icon_google-play">Google Play</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column column_l-4 column_m-3 column_s-2">
+                            <div class="footer-item footer-item_logo">
+                                <img class="logo logo_gray" src="css/blocks/logo/logo-gray.svg" alt="HH" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__text">
+                    © 2019 Группа компаний HeadHunter<br>
+                    Сегодня на сайте 684&nbsp;978&nbsp;вакансий, 34&nbsp;789&nbsp;747&nbsp;резюме, 858&nbsp;923&nbsp;компании и за неделю 1&nbsp;211&nbsp;363&nbsp;приглашения
+                </div>
+            </div>
+        </footer>
         <script src="js/grid.js"></script>
+        <script src="js/popup.js"></script>
     </body>
 </html>

@@ -6,8 +6,8 @@
     "license": "MIT",
     "scripts": {
         "dev": "parcel index.html",
-        "build": "parcel build index.html --public-url '.'",
-        "deploy": "yarn build && gh-pages -d dist"
+        "build": "parcel build index.html --public-url './'",
+        "deploy": "npm run build && gh-pages -d dist"
     },
     "devDependencies": {
         "cssnano": "^4.1.10",

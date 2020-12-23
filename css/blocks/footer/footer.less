@@ -1,0 +1,32 @@
+.footer {
+    background: @color-dark;
+    color: #999999;
+    padding: 15px 0 22px;
+
+    @media @screen-gt-s {
+        padding: 15px 0 30px;
+    }
+
+    @media @screen-gt-m {
+        padding: 20px 0 40px;
+    }
+}
+
+.footer-item {
+    padding: 15px 0;
+
+    &_logo {
+        display: none;
+        text-align: right;
+
+        @media @screen-gt-m {
+            display: block;
+        }
+    }
+}
+
+.footer-container {
+    padding: 15px 0;
+    border-bottom: solid #666 1px;
+    margin-bottom: 15px;
+}
